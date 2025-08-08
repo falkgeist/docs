@@ -178,6 +178,11 @@ Open a terminal and change to the working directory. There run
 $ composer update
 ```
 
+{{% notice info %}}
+After running `composer update`, it subsequently runs `composer install`. This creates a  `vendor/` folder within your local directory, which is not needed, if you ONLY need the updated `composer.lock` for your hosted Contao installation.
+To prevent running `composer install` in this case, you can use the  `--no-install` option: `composer update --no-install`.
+{{% /notice %}}
+
 After the update has been successfully completed, copy the updated `composer.lock`.
 (and the `composer.json` if you made changes there) back to the Contao installation 
 on your hosting. 
