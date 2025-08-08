@@ -185,7 +185,13 @@ Im Wesentlichen machst du dann das Gleiche, wie oben unter
 $ composer update
 ```
 
-aus. Nach dem erfolgreichen Abschluss der Aktualisierung kopierst du die aktualisierte `composer.lock`
+aus.
+
+{{% notice info %}}
+Bei einem `composer update` wird anschließend direkt ein `composer install` ausgeführt. Dadurch wird im Arbeitsverzeichnis der `vendor/`-Ordner angelegt. Denk daran diesen zu löschen, wenn du ihn nicht benötigst, oder du verwendest die `--no-install`-Option: `composer update --no-install`.
+{{% /notice %}}
+
+Nach dem erfolgreichen Abschluss der Aktualisierung kopierst du die aktualisierte `composer.lock`
 (und die `composer.json`, falls du dort Änderungen gemacht hast) zurück in die Contao-Installation 
 auf deinem Hosting. 
 
